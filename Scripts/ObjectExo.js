@@ -255,3 +255,43 @@ function countUsersPoints(users) {
     return {usersPoints, users};
 }
 console.log(countUsersPoints(users));
+
+// **************************************** Level 3 ****************************************//
+// Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncome, totalExpense,
+//  accountInfo,addIncome,addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses
+//  is a set of incomes and its description.
+
+const personAccount = {
+
+    firstName: "",
+    lastName: "",
+    incomes: [],
+    expenses: [],
+    totalIncome: 0,
+    totalExpense: 0,
+    accountInfo: function () {
+        return `${this.firstName} ${this.lastName} has ${this.totalIncome}  incomes and ${this.totalExpense}`;
+    }
+    ,
+    addIncome: function (description, amount) {
+        this.incomes.push({ description, amount });
+        this.totalIncome += amount;
+    }
+    ,
+    addExpense: function (description, amount) {
+        this.expenses.push({ description, amount });
+        this.totalExpense += amount;
+    }
+    ,
+    accountBalance: function () {
+        return this.totalIncome - this.totalExpense;
+    }
+};
+
+personAccount.firstName = "Asab";
+personAccount.lastName = "Kelai";
+personAccount.addIncome("Salary", 5000);
+personAccount.addExpense("Rent", 500);
+personAccount.addExpense("Food", 100);
+console.log(personAccount.accountBalance());
+console.log(personAccount.accountInfo());
