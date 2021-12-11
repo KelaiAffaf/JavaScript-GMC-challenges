@@ -295,3 +295,4 @@ personAccount.addExpense("Rent", 500);
 personAccount.addExpense("Food", 100);
 console.log(personAccount.accountBalance());
 console.log(personAccount.accountInfo());
+
