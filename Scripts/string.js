@@ -15,3 +15,6 @@ console.log(message2.toLowerCase());
 console.log(message.indexOf("o"));
 // string.split(separator,limit) ==> it splits the string into an array of substrings
 console.log(message.split(" "));
+
+let sentence ="Full stack JS track"
+console.log(sentence.charCodeAt("J"));
